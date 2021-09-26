@@ -53,10 +53,23 @@ int main(void)
 
     // 3. 문자열 상수와 포인터
     char *str = "Korea";
-    char *p;
-    p = str;
-    printf("Korea의 주소: %p\n", str);
-    printf("r의 메모리 주소(값): %p(%c), str[2]: %c, p[2]: %c\n", str + 2, *((int *)0x00405115), str[2], p[2]);
+
+    printf("Korea의 시작주소: %p\n", str);
+    printf("두번째 문자의 출력: %c\n", *(char *)0x00405065);
+    printf("세번째 문자의 출력: %c\n", *(str+2));
+
+    // str, str+1, str+2
+    // *str, *(str+1), *(str+2),...
+    // str[0], str[1], str[2]
+    for (int i = 0; i < 6; i++) {
+        printf("str[%d]: %c, ", i, str[i]);
+    }
+
+    printf("\n");
+    for (int i=0; i < 6; i++) {
+        printf("*(str+%d): %c, ", i, *(str+i));
+
+    }
 
     // 4. 배열과 포인터
     char aArray[10];
