@@ -7,7 +7,7 @@ int main(void) {
 	polynomial B = { 4,{ 3,1,0,2,1 } };  // 다항식 B의 초기화
 	polynomial C;
 
-	C = addPoly2(A, B);   // 다항식 A, B에 대한 덧셈을 수행하기 위해 addPoly 함수 호출 
+	C = multPoly(A, B);   // 다항식 A, B에 대한 곱셈을 수행
 
 	printf("\n A(x) =");  printPoly(A);   // 다항식 A 출력
 	printf("\n B(x) =");  printPoly(B);   // 다항식 B 출력

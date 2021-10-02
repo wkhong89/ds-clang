@@ -9,7 +9,7 @@
 				"-g",
 				"addPoly.c", "addPoly2.c", "addTerm.c", "coef.c", 
 				"delTerm.c", "isZeroP.c", "main.c", "maxExp.c", 
-				"multTerm.c", "zeroP.c",
+				"multTerm.c", "zeroP.c", "multPoly.c",
 				"-o",
 				//"${fileDirname}\\${fileBasenameNoExtension}.exe"
 				"${fileDirname}\\poly.exe"
