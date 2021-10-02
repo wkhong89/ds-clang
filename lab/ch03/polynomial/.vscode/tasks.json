@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe 활성 파일 빌드",
+			"command": "C:\\MinGW\\bin\\gcc.exe",
+			"args": [
+				"-g",
+				"addPoly.c", "addPoly2.c", "addTerm.c", "coef.c", 
+				"delTerm.c", "isZeroP.c", "main.c", "maxExp.c", 
+				"multTerm.c", "zeroP.c",
+				"-o",
+				//"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\poly.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "컴파일러: C:\\MinGW\\bin\\gcc.exe"
+		}
+	]
+}

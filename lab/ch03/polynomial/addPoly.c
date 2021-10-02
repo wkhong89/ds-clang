@@ -1,4 +1,5 @@
-#include "addPoly.h"
+#include <stdio.h>
+#include "poly.h"
 
 polynomial addPoly(polynomial A, polynomial B) {
 	polynomial C;   // 다항식 덧셈의 결과 다항식을 저장할 polynomial 구조체 변수 선언
