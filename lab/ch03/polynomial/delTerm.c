@@ -9,19 +9,25 @@ polynomial delTerm(polynomial p, int e)
     // 다음 최고차항의 지수: exp ==> degree - exp 만큼 이동
 
     if (p.degree == e) {
-        // finding nonzero coefficient
-        for (degree = p.degree - 1; degree >= 0; degree--) {
-            index = p.degree - degree;
-            if (p.coef[index] != 0 || degree == 0) break;
-        }
-        // shift to left
-        shift_size = p.degree - degree;
-        for (int i = degree; i >= 0; i--) {
-            index = p.degree - i;
-            p.coef[index - shift_size] = p.coef[index];
+        if (p.degree == 0) {
+            // P(x) = 0
+            p.coef[e] = 0;
 
+        } else {
+            // finding nonzero coefficient
+            for (degree = p.degree - 1; degree > 0; degree--) {
+                index = p.degree - degree;
+                if (p.coef[index] != 0) break;
+            }
+            // shift to left
+            shift_size = p.degree - degree;
+            for (int i = degree; i >= 0; i--) {
+                index = p.degree - i;
+                p.coef[index - shift_size] = p.coef[index];
+
+            }
+            p.degree = degree;
         }
-        p.degree = degree;
     } else if (e < p.degree) {
         index = p.degree - e;
 

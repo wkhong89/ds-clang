@@ -24,7 +24,7 @@ polynomial addTerm(polynomial p, float a, int e)
     }
 
     index = p.degree - e;
-    if (p.coef[index])
+    if (!p.coef[index])
         p.coef[index] = a;
     else {
         printf("addTerm: 해당 차수에 있는 계수와 합했습니다. \n");
