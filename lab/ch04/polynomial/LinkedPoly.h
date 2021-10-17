@@ -1,4 +1,7 @@
 #pragma once
+#include <stdio.h>
+#include <stdlib.h>
+
 // 다항식 리스트의 노드 구조를 구조체로 정의
 float coef;
 typedef struct ListNode {
