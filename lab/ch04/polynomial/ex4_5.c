@@ -1,12 +1,13 @@
 #include "LinkedPoly.h"
 
 int main(void) {
-	ListHead* A, * B, * C;
+	ListHead *A, *B, *C, *D;
 
 	// 공백 다항식 리스트 A, B, C 생성
 	A = createLinkedList();
 	B = createLinkedList();
 	C = createLinkedList();
+	D = createLinkedList();
 
 	appendTerm(A, 4, 3);	// 다항식 리스트 A에 4x3 노드 추가
 	appendTerm(A, 3, 2);	// 다항식 리스트 A에 3x2 노드 추가
@@ -24,6 +25,10 @@ int main(void) {
 	addPoly(A, B, C);		// 다항식의 덧셈 연산 수행
 	printf("\n C(x) =");
 	printPoly(C);			// 다항식 리스트 C 출력
+
+	multPoly(A, B, D);		// 다항식의 곱셈 연산 수행
+	printf("\n D(x) =");
+	printPoly(D);			// 다항식 리스트 D 출력
 
 	getchar();  return 0;
 }

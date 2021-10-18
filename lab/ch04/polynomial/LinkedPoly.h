@@ -19,3 +19,8 @@ ListHead* createLinkedList(void);
 void appendTerm(ListHead* L, float coef, int expo);
 void addPoly(ListHead* A, ListHead* B, ListHead* C);
 void printPoly(ListHead* L);
+
+// ´ÙÇ×½Ä °ö¼ÀÀ» À§ÇÑ ÇÔ¼ö
+void multPoly(ListHead *A, ListHead *B, ListHead *C);
+void freeNode(ListHead *poly);
+void dupPoly(ListHead *src, ListHead *dest);
