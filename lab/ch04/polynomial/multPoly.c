@@ -2,6 +2,7 @@
 
 void multPoly(ListHead *A, ListHead *B, ListHead *C)
 {
+    // 이 곳에 코드를 작성하세요
 
     return;
 }
