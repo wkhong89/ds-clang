@@ -10,7 +10,7 @@
 				"-g",
 				"*.c",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\lab5.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"

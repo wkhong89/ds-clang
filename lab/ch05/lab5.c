@@ -7,7 +7,7 @@ int main(void) {
 	char* express = "(((3 + 8) * 2) - (4/2))";
 
 	printf("중위 표기식: %s\n", express);
-	infix2prefix(express);
+	express = infix2prefix(express);
 	express = "38+2*42/-";
 	printf("후위 표기식 : %s\n", express);
 
