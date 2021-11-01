@@ -39,7 +39,7 @@ void enCQueue(QueueType* cQ, element item) {
 
 // 원형 큐의 front에서 원소를 삭제하고 반환하는 연산
 element deCQueue(QueueType* cQ) {
-	if (isCQueueEmpty(cQ)) return;
+	if (isCQueueEmpty(cQ)) return 0;
 	else {
 		cQ->front = (cQ->front + 1) % cQ_SIZE;
 		return cQ->queue[cQ->front];

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "cQueueS.h"
 
 int main(void) {
