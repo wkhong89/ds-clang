@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "LinkedQueue.h"
 
 int main(void) {

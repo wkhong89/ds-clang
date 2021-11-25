@@ -38,22 +38,25 @@ void enLQueue(LQueueType* LQ, element item) {
 // 연결 큐에서 원소를 삭제하고 반환하는 연산
 element deLQueue(LQueueType* LQ) {
 	QNode* old = LQ->front;
-	element item;
-	if (isLQEmpty(LQ)) return;
+	element item = (element) 0;
+	if (isLQEmpty(LQ)) //return (element)0;
+		;
 	else {
 		item = old->data;
 		LQ->front = LQ->front->link;
 		if (LQ->front == NULL)
 			LQ->rear = NULL;
 		free(old);
-		return item;
+		//return item;
 	}
+
+	return item;
 }
 
 // 연결 큐에서 원소를 검색하는 연산
 element peekLQ(LQueueType* LQ) {
 	element item;
-	if (isLQEmpty(LQ)) return;
+	if (isLQEmpty(LQ)) return (element)0;
 	else {
 		item = LQ->front->data;
 		return item;

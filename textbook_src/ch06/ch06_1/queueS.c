@@ -40,7 +40,7 @@ void enQueue(QueueType* Q, element item) {
 
 // 순차 큐의 front에서 원소를 삭제하는 연산
 element deQueue(QueueType* Q) {
-	if (isQueueEmpty(Q)) return;  // 공백 상태이면, 삭제 연산 중단
+	if (isQueueEmpty(Q)) return 0;  // 공백 상태이면, 삭제 연산 중단
 	else {
 		Q->front++;
 		return Q->queue[Q->front];
@@ -49,7 +49,7 @@ element deQueue(QueueType* Q) {
 
 // 순차 큐의 가장 앞에 있는 원소를 검색하는 연산
 element peekQ(QueueType* Q) {
-	if (isQueueEmpty(Q)) return; // 공백 상태이면 연산 중단
+	if (isQueueEmpty(Q)) return 0; // 공백 상태이면 연산 중단
 	else return Q->queue[Q->front + 1];
 }
 

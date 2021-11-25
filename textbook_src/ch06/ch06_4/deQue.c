@@ -54,11 +54,13 @@ void insertRear(DQueType* DQ, element item) {
 }
 
 // 데크의 front 노드를 삭제하고 반환하는 연산
+// DQ가 비어있으면, 0을 return
+// 그렇지 않으면, DQ의 Front 데이터를 return
 element deleteFront(DQueType* DQ) {
 	DQNode* old = DQ->front;
 	element item;
 	if (isDeQEmpty(DQ)) {
-		printf("\n Linked deQue is empty! \n");  return;
+		printf("\n Linked deQue is empty! \n");  return 0;
 	}
 	else {
 		item = old->data;
@@ -80,7 +82,8 @@ element deleteRear(DQueType* DQ) {
 	DQNode* old = DQ->rear;
 	element item;
 	if (isDeQEmpty(DQ)) {
-		printf("\n Linked deQue is empty! \n"); return;
+		printf("\n Linked deQue is empty! \n"); 
+		return 0;
 	}
 	else {
 		item = old->data;
@@ -101,7 +104,7 @@ element deleteRear(DQueType* DQ) {
 element peekFront(DQueType* DQ) {
 	element item;
 	if (isDeQEmpty(DQ)) {
-		printf("\n Linked deQue is empty! \n"); return;
+		printf("\n Linked deQue is empty! \n"); return 0;
 	}
 	else {
 		item = DQ->front->data;
@@ -113,7 +116,7 @@ element peekFront(DQueType* DQ) {
 element peekRear(DQueType* DQ) {
 	element item;
 	if (isDeQEmpty(DQ)) {
-		printf("\n Linked deQue is empty! \n"); return;
+		printf("\n Linked deQue is empty! \n"); return 0;
 	}
 	else {
 		item = DQ->rear->data;

@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "CircularLinkedList.h"
 
 // 공백 원형 연결 리스트를 생성하는 연산
