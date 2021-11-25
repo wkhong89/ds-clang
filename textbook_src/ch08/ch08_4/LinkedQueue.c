@@ -39,7 +39,7 @@ void enLQueue(LQueueType* LQ, element item) {
 element deLQueue(LQueueType* LQ) {
 	QNode* old = LQ->front;
 	element item;
-	if (isLQEmpty(LQ)) return;
+	if (isLQEmpty(LQ)) return -1;
 	else {
 		item = old->data;
 		LQ->front = LQ->front->link;
@@ -53,7 +53,7 @@ element deLQueue(LQueueType* LQ) {
 // 연결 큐에서 원소를 검색하는 연산
 element peekLQ(LQueueType* LQ) {
 	element item;
-	if (isLQEmpty(LQ)) return;
+	if (isLQEmpty(LQ)) return -1;
 	else {
 		item = LQ->front->data;
 		return item;
